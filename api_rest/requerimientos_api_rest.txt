@@ -1,0 +1,142 @@
+# API REST para Productos y Carrito de Compras
+
+## Descripción
+
+Esta API REST permite gestionar productos, consultar su información, crear, editar y eliminar registros. Además, ofrece funcionalidades para administrar un carrito de compras, permitiendo a los usuarios agregar, actualizar y eliminar productos del mismo.
+
+## Requerimientos
+
+- **Backend:** Python con Flask
+- **Frontend:** TypeScript y Next.js
+- **Base de Datos:** MySQL Server
+- **Autenticación:** JWT (JSON Web Tokens)
+
+## Flujo de Trabajo
+
+1. **Consulta de Productos:**
+   - El cliente envía una solicitud GET al servidor para obtener la lista de productos.
+   - El servidor responde con los datos almacenados en la base de datos MySQL.
+
+2. **Gestión de Productos:**
+   - Crear: Enviar una solicitud POST con los datos del producto.
+   - Editar: Enviar una solicitud PUT a un producto específico con los datos actualizados.
+   - Eliminar: Enviar una solicitud DELETE para borrar un producto.
+
+3. **Carrito de Compras:**
+   - Agregar productos: Enviar una solicitud POST al carrito con el ID del producto y la cantidad.
+   - Consultar contenido del carrito: Solicitud GET para obtener los productos agregados.
+   - Actualizar cantidades: Solicitud PUT con el ID del producto y la nueva cantidad.
+   - Eliminar productos: Solicitud DELETE para remover un producto del carrito.
+
+4. **Autenticación:**
+   - El cliente debe autenticarse mediante JWT para realizar operaciones en el sistema.
+
+## Instalación
+
+### Requisitos previos
+
+- Python (v3.8 o superior)
+- Node.js (v14 o superior)
+- MySQL Server
+- Git
+
+### Pasos para clonar e instalar
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/usuario/api-rest-productos-carrito.git
+cd api-rest-productos-carrito
+```
+
+### Backend (Flask)
+
+```bash
+# Crear un entorno virtual
+python3 -m venv venv
+source venv/bin/activate
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Configurar variables de entorno
+export FLASK_APP=app.py
+export FLASK_ENV=development
+
+# Iniciar el servidor
+flask run
+```
+
+### Frontend (Next.js)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Configuración
+
+1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   ```env
+   PORT=3000
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_USER=tu_usuario
+   DB_PASSWORD=tu_contraseña
+   DB_NAME=nombre_base_datos
+   JWT_SECRET=tu_secreto_jwt
+   ```
+
+## Endpoints
+
+### Productos
+
+- **GET** `/api/productos` - Obtener todos los productos
+- **GET** `/api/productos/:id` - Obtener un producto por ID
+- **POST** `/api/productos` - Crear un nuevo producto
+- **PUT** `/api/productos/:id` - Actualizar un producto
+- **DELETE** `/api/productos/:id` - Eliminar un producto
+
+### Carrito de Compras
+
+- **POST** `/api/carrito` - Crear un nuevo carrito
+- **POST** `/api/carrito/:id/productos` - Agregar un producto al carrito
+- **GET** `/api/carrito/:id` - Consultar el contenido del carrito
+- **PUT** `/api/carrito/:id/productos/:productoId` - Actualizar la cantidad de un producto
+- **DELETE** `/api/carrito/:id/productos/:productoId` - Eliminar un producto del carrito
+
+## Pruebas
+
+### Backend
+
+Ejecutar las pruebas con Pytest:
+
+```bash
+pytest
+```
+
+### Frontend
+
+Ejecutar las pruebas con Jest:
+
+```bash
+npm test
+```
+
+## Documentación
+
+Para consultar la documentación de la API, visitar:
+
+```
+http://localhost:3000/api-docs
+```
+
+## Contribución
+
+
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+
