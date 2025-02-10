@@ -6,11 +6,8 @@ Esta API REST permite gestionar productos, consultar su información, crear, edi
 ## Tecnologías Utilizadas
 - **Backend:** Python con Flask
 - **Frontend:** TypeScript y Next.js
-- **Base de datos:** PostgreSQL o MongoDB (configurable según el entorno)
+- **Base de datos:** MySQL
 - **Autenticación:** JWT (JSON Web Tokens)
-- **Documentación:** Swagger
-- **Pruebas:** Pytest (para backend) y Jest (para frontend)
-- **Control de versiones:** Git
 - **Entorno de desarrollo:** Docker (opcional)
 
 ---
