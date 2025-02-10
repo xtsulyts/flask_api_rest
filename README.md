@@ -6,7 +6,7 @@ Esta API REST permite gestionar productos, consultar su información, crear, edi
 ## Tecnologías Utilizadas
 - **Backend:** Python con Flask
 - **Frontend:** TypeScript y Next.js
-- **Base de datos:** MySQL
+- **Base de datos:** MySQL server
 - **Autenticación:** JWT (JSON Web Tokens)
 - **Entorno de desarrollo:** Docker (opcional)
 
@@ -33,9 +33,8 @@ Esta API REST permite gestionar productos, consultar su información, crear, edi
 ### Requisitos previos
 - Python (v3.8 o superior)
 - Node.js (v14 o superior)
-- PostgreSQL o MongoDB
+- MySQL server
 - Git
-- Docker (opcional)
 
 ### Pasos para clonar e instalar
 ```bash
