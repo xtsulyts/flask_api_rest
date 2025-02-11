@@ -34,20 +34,18 @@ Esta API REST permite gestionar productos, consultar su información, crear, edi
 - Python (v3.8 o superior)
 - Node.js (v14 o superior)
 - MySQL server
-- Git
 
-### Pasos para clonar e instalar
-```bash
-# Clonar el repositorio
-git clone https://github.com/usuario/api-rest-productos-carrito.git
-cd api-rest-productos-carrito
+
+
 ```
 
 ### Backend (Flask)
-```bash
 # Crear un entorno virtual
+
+```bash
 python3 -m venv venv
-source venv/bin/activate 
+source venv/bin/activate
+```
 
 # Instalar dependencias
 pip install -r requirements.txt
@@ -57,12 +55,16 @@ export FLASK_APP=app.py
 export FLASK_ENV=development
 
 # Iniciar el servidor
+
+```bash
 flask run
 ```
 
+
 ### Frontend (Next.js)
-```bash
 cd frontend
+
+```bash
 npm install
 npm run dev
 ```
