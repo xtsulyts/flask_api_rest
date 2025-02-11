@@ -48,7 +48,10 @@ source venv/bin/activate
 ```
 
 # Instalar dependencias
+
+```bash
 pip install -r requirements.txt
+```
 
 # Configurar variables de entorno
 
