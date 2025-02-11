@@ -37,7 +37,7 @@ Esta API REST permite gestionar productos, consultar su información, crear, edi
 
 
 
-```
+
 
 ### Backend (Flask)
 # Crear un entorno virtual
@@ -51,8 +51,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Configurar variables de entorno
+
+```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
+```
 
 # Iniciar el servidor
 
@@ -71,6 +74,7 @@ npm run dev
 
 ### Configuración
 1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   
    ```env
    PORT=3000
    DB_TYPE=MySQL
